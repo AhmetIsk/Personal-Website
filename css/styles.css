@@ -1,13 +1,13 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #61122f;
+  background-color: #924949;
   font-family: 'Oxygen', sans-serif;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: #f6b319;
+  background-color: #ffffff;
   border-radius: 0;
   border: 0;
 }
@@ -24,7 +24,7 @@ body {
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
-  color: #557c3e;
+  color: #ca0606;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
@@ -66,7 +66,7 @@ body {
   text-align: center;
 }
 #nav-list a:hover {
-  background: #E7E7E7;
+  background: #e6d9d9;
 }
 #nav-list a span {
   font-size: 1.8em;
@@ -93,6 +93,20 @@ body {
   margin-top: -30px;
 }
 /* END HEADER */
+
+.me-photo{
+  position: relative;
+  border: 2px solid #3F0C1F; 
+  overflow: hidden;
+  padding: 0;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.about-me-details{
+  font-style: italic;
+  margin-top: 15px;
+
+}
 
 /* FOOTER */
 .panel-footer {
@@ -142,7 +156,7 @@ body {
   overflow: hidden;
 }
 #oil-colour-tile:hover, #acrylic-colour-tile:hover, #map-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
+  box-shadow: 0 1px 5px 1px #e6d9d9;
 }
 #oil-colour-tile {
   background: url('../images/oil.jpg') no-repeat;
@@ -252,8 +266,8 @@ body {
     display: block;
     margin: 0 20px;
     padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
+    border: 2px solid #3F0C1F;
+    background-color: #ffffff;
     color: #951c49;
   }
   #xs-deliver {
@@ -264,6 +278,11 @@ body {
   }
   /* End Header */
 
+  .me-photo{
+    width: 50%;
+    text-align: center;
+    margin-right: auto;
+  }
   /* Footer */
   .panel-footer section {
     margin-bottom: 30px;
