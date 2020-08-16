@@ -102,10 +102,9 @@ body {
   margin-left: auto;
   margin-bottom: 20px;
 }
-.about-me-details{
+.about-me-details, .awards-details{
   font-style: italic;
   margin-top: 15px;
-
 }
 
 /* FOOTER */
