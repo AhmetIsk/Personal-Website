@@ -83,7 +83,7 @@
             <div class="menu-item-photo">
               <img class="img-responsive" width="250" height="150" src="images/pic1.jpg" alt="Item">
             </div>
-            <div class="menu-item-price">size: 30 x 30 <span>(cm)  </span>|    $ 120<span> (Dollar)</span> </div>
+            <div class="menu-item-price">size: 30 x 30 <span>(cm)  </span> </div>
           </div>
           <div class="menu-item-description col-sm-7">
             <h3 class="menu-item-title">Church in Alps, Switzerland</h3>
@@ -99,7 +99,7 @@
             <div class="menu-item-photo">
               <img class="img-responsive" width="250" height="150" src="images/pic2.jpg" alt="Item">
             </div>
-            <div class="menu-item-price">size: 50 x 60 <span>(cm)  </span>|    $ 260<span> (Dollar)</span></div>
+            <div class="menu-item-price">size: 50 x 60 <span>(cm)  </span></div>
           </div>
           <div class="menu-item-description col-sm-7">
             <h3 class="menu-item-title">Weeping Clown</h3>
@@ -113,6 +113,12 @@
 
     </section>
   </div><!-- End of #main-content -->
+  <section class="discussion">
+    <button class="showHide ">Show Discussions</button>
+    <div class="panel ">
+      <div id="jfcomments"></div>
+    </div>
+  </section>
 
   <footer class="panel-footer">
     <div class="container">
@@ -141,8 +147,36 @@
   </footer>
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="https://raw.githack.com/AhmetIsk/JotForum/main/dist/index.umd.js"></script>
+  <script>
+      var path = window.location.pathname;
+      var page = path.split("/").pop();
+      var commentsDiv = document.querySelector('#jfcomments');
+      var apiKey = '446878e07510e8b079996bcde82ee265';
+      var comments = new JotForum(commentsDiv, apiKey, "presentation");
+  </script>
+
+
+
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    var acc = document.getElementsByClassName("showHide");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
+
 </html>

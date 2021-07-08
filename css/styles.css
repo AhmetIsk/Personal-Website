@@ -5,6 +5,12 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+#jfcomments {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  font-family: 'Oxygen', sans-serif;
+}
+
 /** HEADER **/
 #header-nav {
   background-color: #ffffff;
@@ -353,7 +359,49 @@ h3.menu-item-title {
   }
 }
 
+.showHide {
+  background-color: #924949;
+  color: rgb(246, 232, 232);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
 
+.showHide:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+  display: inline;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .showHide:hover {
+  background-color: #ccc;
+}
+
+/* Style the showHide panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  position: relative;
+}
+
+.discussion {
+  width: 60%;
+  margin: 0 auto;
+}
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
   /* Header */
